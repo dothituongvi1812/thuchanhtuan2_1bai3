@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Chuyển đổi năm dương lịch"
+        android:textAlignment="center"
+        android:textSize="25dp"
+        android:textColor="#fff"
+        android:background="#046A08"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Năm dương lịch: "/>
+        <EditText
+            android:id="@+id/edtnamduonglich"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <Button
+        android:id="@+id/buttonChuyenDoi"
+        android:layout_width="280dp"
+        android:layout_marginLeft="105dp"
+        android:layout_marginTop="5dp"
+        android:layout_height="wrap_content"
+        android:text="Chuyển đổi"
+        android:backgroundTint="#8F8D8D"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Năm âm lịch: "/>
+        <EditText
+            android:id="@+id/edtnamamlich"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:background="#E1D67B"/>
+    </LinearLayout>
+</LinearLayout>
