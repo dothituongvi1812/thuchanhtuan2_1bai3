@@ -22,12 +22,22 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="25dp"
             android:text="Năm dương lịch: "/>
         <EditText
             android:id="@+id/edtnamduonglich"
-            android:layout_width="300dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content" />
+
     </LinearLayout>
+
+       <TextView
+           android:id="@+id/tvThongBao"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:textStyle="italic"
+           android:textColor="#F63B3B"/>
+
     <Button
         android:id="@+id/buttonChuyenDoi"
         android:layout_width="280dp"
@@ -44,10 +54,11 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Năm âm lịch: "/>
+            android:text="Năm âm lịch: "
+            android:textSize="25dp"/>
         <EditText
             android:id="@+id/edtnamamlich"
-            android:layout_width="300dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#E1D67B"/>
     </LinearLayout>

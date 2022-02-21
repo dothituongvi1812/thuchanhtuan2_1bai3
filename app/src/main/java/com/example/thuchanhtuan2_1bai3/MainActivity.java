@@ -2,10 +2,13 @@ package com.example.thuchanhtuan2_1bai3;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -16,22 +19,29 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         EditText edtNamDuongLich=findViewById(R.id.edtnamduonglich);
         EditText edtNamAmLich=findViewById(R.id.edtnamamlich);
+        TextView tvThongBao=findViewById(R.id.tvThongBao);
         Button btnChuyenDoi=findViewById(R.id.buttonChuyenDoi);
         btnChuyenDoi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String namDL=edtNamDuongLich.getText().toString();
-//                if(namDL.matches("")){
-//                    Toast.makeText(MainActivity.this, "Bạn chưa nhập năm dương lịch", Toast.LENGTH_SHORT).show();
-//
-//                }
-                int namDuongLich=Integer.valueOf(namDL);
-                if( namDuongLich<1900){
-                    Toast.makeText(MainActivity.this, "Năm phải lớn hơn hoặc bằng 1900", Toast.LENGTH_SHORT).show();
-                    edtNamDuongLich.setText("");
+
+
+                if(!namDL.matches("^[0-9]+$")||namDL.equals("")){
+                    tvThongBao.setText("Vui lòng nhập số");
+                    edtNamDuongLich.setFocusable(true);
+                    edtNamDuongLich.selectAll();
+
                     return;
                 }
-
+                int namDuongLich=Integer.parseInt(edtNamDuongLich.getText().toString());
+                if( namDuongLich<1900){
+                    tvThongBao.setText("Năm phải lớn hơn 1900");
+                    edtNamDuongLich.setFocusable(true);
+                    edtNamDuongLich.selectAll();
+                    return;
+                }
+                tvThongBao.setText("");
                 switch (namDuongLich%10){
                     case 0:{
                         can="Canh";
